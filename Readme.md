@@ -1,6 +1,6 @@
 This software was created for imbedding in applications that require the use of the PWM interface on Debian based Linux SOC's. 
 The Beaglebone Black was the SOC for which this Class was initially developed. The Linux enviroment is:<br>
-image  -- Beaglebone Black Debian 13 2025-09-05 - am335c-debian-13-base-v6.12-armhf-2025-09-05-4gp.img.xz<br>
+image -- Beaglebone Black Debian 13 2025-09-05 - am335c-debian-13-base-v6.12-armhf-2025-09-05-4gp.img.xz<br>
 kernel -- version 6.12.49-bone36 Sep 25 19:56:57 UTC 2025 armv7l GNU/Linux<br>
 
 This software expects that the following pins:<br>
@@ -30,7 +30,7 @@ This class depends on the kernel using the "sysfs" driver to operate properly. T
 command line commands must be working properly, plus the overlays added to the /boot/uEnv.txt file, and being a member
 of the pwm group.
 
-If not installed install the following:
+If not installed install the following:<br>
 $ sudo apt update<br>
 $ sudo apt install build-essential<br>
 $ sudo apt install g++ gcc cmake<br>
@@ -39,10 +39,10 @@ $ sudo apt install git
 Initial development was cross compiled from a Ubuntu 20.04 PC.<br>
 
 Install software on the Beaglebone Black:<br>
-$ git clone http://github.com/gitklindsayjr/PwmClass_tests
+$ git clone http://github.com/gitklindsayjr/PwmClass_BBB
 
 The following should be the result of the clone operation<br>
-$ cd PwmClass_test<br>
+$ cd PwmClass_BBB<br>
 $ ls<br>
 CMakeLists.txt src<br>
 $ ls src<br>
@@ -54,12 +54,12 @@ $ cmake -DNATIVE ..<br>
 $ cmake --build . -- VERBOSE=1<br>
 
 Build process results:<br>
-$ ls
+$ ls<br>
 CMakeCache.txt CMakeFiles Makefile cmake_install.cmake pwm-test
 
-The executable is "pwm-test" uses the pins P9_14 and P9_16 as /dev/bone/pwm/1a & b respecitvely. Also
+The executable is "pwm-test" which uses the pins P9_14 and P9_16 as /dev/bone/pwm/1a & b respecitvely. Also
 pins P8_19 and P8_13 as /dev/bone/pwm2/a & b respectively.
 
-Example command line use, all pins the default is to specify no pins in which P9_14 is used:
+Example command line use, all pins the default is to specify no pins in which P9_14 is used:<br>
 $ ./gpiod-test P9_14 P9_16 P8_19 P8_13 
 	
