@@ -163,7 +163,7 @@ int main(int argc, char *argv[])
     		input = line->getLineBlock();
     	    if((input == "Y") || (input == "y"))
     	    {
-   	    		for(unsigned i = 1; i<numPins; i++)
+   	    		for(unsigned i = 1; i<=numPins; i++)
    	    			pwm->setEnabledState(pin[i], DISABLED);
     	    }
     	    loop = false;
