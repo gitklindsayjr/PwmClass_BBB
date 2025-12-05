@@ -50,7 +50,7 @@ BBB_Pwm.cpp BBB_Pwm.h pwm_class.cpp pwm_class.h main.cpp<br>
 
 Begin the build process:<br>
 $ mkdir build<br>
-$ cmake -DNATIVE ..<br>
+$ cmake -DNATIVE=1 ..<br>
 $ cmake --build . -- VERBOSE=1<br>
 
 Build process results:<br>
