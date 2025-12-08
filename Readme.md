@@ -14,8 +14,8 @@ Remove comment from:<br>
 enable_uboot_overlays=1<br>
  
 Add the overlays to the following section. ###Additional custom Cape section<br>
-dtb_overlay=/boot/dtbs/6.12.49-bone36/overlays/BB-EHRPWM1-P9_14-P9_16.dtbo<br>
-dtb_overlay=/boot/dtbs/6.12.49-bone36/overlays/BB-EHRPWM2-P8_13-P8_19.dtbo<br>
+uboot_overlay_addr4=BB-EHRPWM1-P9_14-P9_16.dtbo<br>
+uboot_overlay_addr5=BB-EHRPWM2-P8_13-P8_19.dtbo<br>
 
 The include file that holds the PWM Pin information is "BBB_Pwm.h" in a array named "pinsArray".
 The pin list enumeration "pwm_pins" was based on the overlays mentioned above. To add (requires a new overlay)
