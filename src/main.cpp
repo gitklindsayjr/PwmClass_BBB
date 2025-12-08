@@ -43,8 +43,8 @@
  *   Note: "uname_r=6.12.49-bone36" which is the correct overlay path for the current
  *          installed kernel versione.
  * ###Additional custom Cape section
- * dtb_overlay=/boot/dtbs/6.12.49-bone36/overlays/BB-EHRPWM1-P9_14-P9_16.dtbo
- * dtb_overlay=/boot/dtbs/6.12.49-bone36/overlays/BB-EHRPWM2-P8_13-P8_19.dtbo                                *
+ * uboot_overlay_addr4=BB-EHRPWM1-P9_14-P9_16.dtbo
+ * uboot_overlay_addr5=BB-EHRPWM2-P8_13-P8_19.dtbo                                *
  *
  *                        ----------------------------------
  *                        |                                |
