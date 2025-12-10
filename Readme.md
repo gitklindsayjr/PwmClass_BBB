@@ -28,7 +28,7 @@ and pwm_pin_state_t state. The state stores the period, pulse width, and the run
 
 This class depends on the kernel using the "sysfs" driver to operate properly. These following
 command line commands must be working properly, plus the overlays added to the /boot/uEnv.txt file, and being a member
-of the pwm group.
+of the correct group.
 
 If not installed install the following:<br>
 $ sudo apt update<br>
@@ -60,6 +60,11 @@ CMakeCache.txt CMakeFiles Makefile cmake_install.cmake pwm-test
 The executable is "pwm-test" which uses the pins P9_14 and P9_16 as /dev/bone/pwm/1a & b respecitvely. Also
 pins P8_19 and P8_13 as /dev/bone/pwm2/a & b respectively.
 
+Check groups, need to belong to gpio or pwm for write privileges
+$ ls -l /dev/bone/pwm/1/a/.
+-rw-rw-r-- 1 root gpio 4096 Dec 10 00:25 /dev/bone/pwm/1a/period
+In this case the group is gpio
+$ sudo usermod -aG gpio $USER
 Example command line use, all pins the default is to specify no pins in which P9_14 is used:<br>
 $ ./gpiod-test P9_14 P9_16 P8_19 P8_13 
 	
